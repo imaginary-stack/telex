@@ -52,7 +52,7 @@ pub mod receive {
 pub mod send {
     use std::{io::Write, net::TcpStream};
 
-    use crate::message::{self, Message};
+    use crate::message::Message;
 
     pub fn send() {
         let binding = Message::get_messages();
