@@ -1,4 +1,4 @@
-use network::listener;
+use network::receive::listener;
 
 mod message;
 mod network;
