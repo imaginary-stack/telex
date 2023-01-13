@@ -1,11 +1,13 @@
 use clap::Command;
-use network::receive::listener;
+use config::Config;
 
+mod config;
 mod message;
 mod network;
-mod config;
 
 fn main() {
+    let config = Config::read_file();
+
     let app = Command::new("telex")
         .about("for transferring messages within a LAN")
         .version("0.1.0")
